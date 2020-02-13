@@ -127,7 +127,7 @@ void ethos_setup(ethos_t *dev, const ethos_params_t *params)
     #ifdef USE_CPL
     uint8_t frame_delim = ETHOS_FRAME_DELIMITER;
 
-    ST7580InterfaceInit();
+    ST7580InterfaceInit(UART_DEV(1), GPIO_PIN(PORT_A, 8), GPIO_PIN(PORT_A, 5));
     _rcv_pid = thread_create(_rcv_stack, sizeof(_rcv_stack), THREAD_PRIORITY_MAIN - 1, THREAD_CREATE_STACKTEST, _ethos_recv_chk, (void*)dev, "_ethos_recv_chk");
     
     ST7580DlData(DATA_OPT, &frame_delim, 1, NULL);
