@@ -1,5 +1,5 @@
 # ethos-over-cpl
- Modified RIOT-OS ethos driver communicating over PLC using the ST7580 IC.
+Modified RIOT-OS ethos driver allowing IPv6 communication over PLC using the ST7580 IC.
 
 Derived from https://riot-os.org/api/group__drivers__ethos.html
 
